@@ -10,7 +10,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
-        .package(url: "https://github.com/LiveUI/XMLCoding.git", from: "0.1.0"),
+        .package(url: "https://github.com/xylys/XMLCoding.git", from: "2.0.0"),
         .package(url: "https://github.com/LiveUI/VaporTestTools.git", .branch("master"))
     ],
     targets: [
