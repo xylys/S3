@@ -13,7 +13,11 @@ extension String {
     func encode(type: AWSEncoding) -> String? {
         let allowed = NSMutableCharacterSet.alphanumeric()
         allowed.addCharacters(in: type.rawValue)
-        return self.addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)
+        if let allowed = allowed as? CharacterSet {
+            return self.addingPercentEncoding(withAllowedCharacters: allowed)
+        } else {
+            return ""
+        }
     }
     
 }
